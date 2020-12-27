@@ -1,6 +1,6 @@
 # Binance Spot - User Portfolio
 
-This project creates a potfolio dashboard for binance spot exchange using API keys. Check out the [youtube video](https://youtu.be/7SCT3YJIISI) for more information.
+This project creates a portfolio dashboard for binance spot exchange using API keys. Check out the [youtube video](https://youtu.be/7SCT3YJIISI) for more information.
 
 ### Do this first to protect your account!
 
