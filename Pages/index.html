@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="public/css/favicon3.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="public/css/style.css">
+    <title>User Portfolio</title>
+</head>
+<body>
+    <section class="header">
+        <h1>Binance SPOT - User Portfolio</h1>
+        <p>Enter api keys and click on run button to view portfolio. <span class="text-danger">To secure your account, restrict API Keys access to READ ONLY.</span></p>
+    </section>
+    <section class="search">
+        <div>
+            <label for="apikey">API KEY</label>
+            <input type="password" id="apikey" placeholder="" value="">
+        </div>
+        <div>
+            <label for="seckey">SECRET KEY</label>
+            <input type="password" id="seckey" placeholder="" value="">
+        </div>
+        <div>
+            <button id="generate" type="submit" class="btn-search" onclick="generate();">RUN</button>
+        </div>
+    </section>
+    <section class="report">
+        <div class="card card1" id="data1">
+            <p class="text-title">Total value of all coins</p>
+            <p><span class="text-primary">1000 USDT </span><span class="text-secondary">(0.2323 BTC)</span></p>
+        </div>
+        <div class="card card2">
+            <p class="text-title">Total Trades</p>
+            <p><span class="text-primary">500 </span><span class="text-secondary">(285D 5h 49m 20s)</span></p>
+        </div>
+        <div class="card card3">
+            <p class="text-title">First Trade</p>
+            <p><span class="text-primary">21 Dec. 2015 </span><span class="text-secondary">(3h 19m 48s ago)</span></p>
+        </div>
+        <div class="card card4">
+            <p class="text-title">Last Trade</p>
+            <p><span class="text-primary">21 Dec. 2020 </span><span class="text-secondary">(3h 19m 48s ago)</span></p>
+        </div>
+        <div class="card card5">
+            <p class="text-title">Order Frequency</p>
+            <p><span class="text-primary">100 </span><span class="text-secondary"> per day</span></p>
+        </div>
+        <div class="card card6">
+            <p class="text-title">Bitcoin Price (USDT)</p>
+            <p><span class="text-primary">23,400 USDT </span></p>
+        </div>
+        <div class="card card7">
+            <p class="text-title">Breakdown of assets</p>
+            <canvas id="bdoa"></canvas>
+        </div>
+        <div class="card card8">
+            <p class="text-title">Orders Timeline</p>
+            <canvas id="orderstimeline"></canvas>
+        </div>
+        <div class="card card9">
+            <p class="text-title">Orders breakdown by symbols</p>
+            <canvas id="ordersdistbtn"></canvas>
+        </div>
+        <div class="card card10">
+            <p class="text-title">Order Details</p>
+            <table id="ordersTable" class="display" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th>time</th>
+                        <th>orderId</th>
+                        <th>clientOrderId</th>
+                        <th>symbol</th>
+                        <th>side</th>
+                        <th>status</th>
+                        <th>origQty</th>
+                        <th>price</th>
+                        <th>stopPrice</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="footer">
+        <p>Check out the youtube video for more information.</p>
+        <ul>
+            <li><a href="https://www.youtube.com/user/karthik947" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            <li><a  href="https://github.com/karthik947" target="_blank"><i class="fab fa-github"></i></a></li>
+        </ul>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js" integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ==" crossorigin="anonymous"></script>
+    <script src="public/js/index.js"></script>
+</body>
+</html>

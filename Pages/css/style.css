@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 2rem 10rem 0rem 10rem;
+  font-family: 'Archivo', sans-serif;
+  background: #ddd;
+}
+
+label {
+  display: block;
+}
+
+section.header {
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1rem;
+}
+
+section.header h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+}
+
+section.header p {
+  font-family: 'Archivo', sans-serif;
+  font-size: 0.75rem;
+}
+
+section.search {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  column-gap: 50px;
+  margin-top: 1rem;
+  background: #333;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+section.search label {
+  font-size: 0.6rem;
+}
+
+section.search div {
+  width: 100%;
+}
+
+section.search div input {
+  width: 100%;
+  padding: 0.25rem;
+}
+
+.btn-search {
+  color: black;
+  background: #e09b10;
+  width: 100%;
+  border: none;
+  padding: 0.25rem;
+  font-weight: bold;
+}
+
+.btn-search:hover {
+  background: crimson;
+}
+
+.btn-search:disabled {
+  background: #ddd;
+  color: #555;
+}
+
+section.report {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-top: 1rem;
+}
+
+section.report .card {
+  /* border: 1px solid #888; */
+  padding: 1rem;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.text-title {
+  font-size: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.text-primary {
+  font-weight: bold;
+}
+
+.text-secondary {
+  color: #aaa;
+  font-weight: bold;
+}
+
+.card8 {
+  grid-column: span 2;
+}
+
+.card9 {
+  grid-column: span 3;
+}
+
+.card10 {
+  grid-column: span 3;
+}
+
+.text-danger {
+  color: crimson;
+  font-weight: bold;
+}
+
+#ordersTable {
+  font-size: 0.75rem;
+}
+
+#ordersTable td {
+  white-space: nowrap;
+  text-align: center;
+}
+
+section.footer {
+  background: #333;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-family: 'Francois One', sans-serif;
+}
+section.footer p {
+  font-size: 0.9rem;
+}
+
+section.footer ul li {
+  list-style: none;
+}
+
+section.footer ul li a {
+  color: white;
+}
+
+section.footer ul {
+  display: flex;
+}
+
+section.footer ul li {
+  margin-left: 2rem;
+  font-size: 2rem;
+  border-bottom: 2px solid white;
+  cursor: pointer;
+}
+
+section.footer ul li:hover {
+  border-bottom: 2px solid crimson;
+}
+
+section.footer ul li:hover i {
+  color: crimson;
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6 {
+  border-left: 5px solid seagreen;
+}
